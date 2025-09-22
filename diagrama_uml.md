@@ -1,3 +1,4 @@
+```mermaid
 flowchart TB
     %% Pessoas (atores)
     A["👤 Aluno
@@ -16,4 +17,4 @@ flowchart TB
     A -->|Avalia docentes e consulta avaliações| AA
     B -->|Consulta avaliações recebidas| AA
     AA -->|Armazena e recupera feedback| DB
-
+```
