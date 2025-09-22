@@ -16,3 +16,5 @@ flowchart TB
     A -->|Avalia docentes e consulta avaliações| AA
     B -->|Consulta avaliações recebidas| AA
     AA -->|Armazena e recupera feedback| DB
+    <img width="3782" height="3840" alt="Untitled diagram _ Mermaid Chart-2025-09-22-165159" src="https://github.com/user-attachments/assets/4793cf60-7ee7-4425-b5a8-e8a374f11fbb" />
+
