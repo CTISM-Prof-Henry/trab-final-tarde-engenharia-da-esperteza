@@ -39,6 +39,6 @@ Utilize esse [link](https://github.com/CTISM-Prof-Henry/trab-final-tarde-engenha
 
 ## Após se tudo ocorrer certo executar os comandos no console
 
-1 - npm install<br>
-2 - ng serve<br>
-3 - Podendo abrir o site no navegador com http://localhost:4200/<br>
+- 1 - npm install
+- 2 - ng serve
+- 3 - Podendo abrir o site no navegador com http://localhost:4200/
