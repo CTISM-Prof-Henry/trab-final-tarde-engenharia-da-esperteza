@@ -37,8 +37,8 @@ Utilize esse [link](https://github.com/CTISM-Prof-Henry/trab-final-tarde-engenha
 - No terminal definir a pasta do projeto;
 - Utilizar o comando git clone "URL"
 
-## Após se tudo ocorrer certo executar os comandos no console
+## Após se tudo ocorrer certo executar os comandos no console:
 
-1 - npm install.
-2 - ng serve.
+1 - `npm install`
+2 - `ng serve`
 3 - Podendo abrir o site no navegador com http://localhost:4200/.
