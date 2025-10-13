@@ -20,4 +20,19 @@
 
 ## Após a instalação do VsCode e NodeJs, pode ser baixado o zip ou clonado do projeto.
 
-Utilize esse [link](https://github.com/CTISM-Prof-Henry/trab-final-tarde-engenharia-da-esperteza).
+Utilize esse [link](https://github.com/CTISM-Prof-Henry/trab-final-tarde-engenharia-da-esperteza) para acessar o projeto.
+
+### Baixar por zip
+
+- Clique em código;
+- Baixar ZIP;
+- Extraia-o na pasta desejada;
+- Abra o VsCode;
+- Em File clique em Open Folder e selecione a pasta do projeto extraído.
+
+### Clonando projeto
+
+- Copiar a URL;
+- Abrir o VsCode;
+- No terminal definir a pasta do projeto;
+- Utilizar o comando git clone "URL"
