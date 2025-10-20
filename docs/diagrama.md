@@ -1,3 +1,4 @@
+# Caso de Uso
 ```mermaid
 flowchart LR
 %% Atores
