@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
 %% Atores
 Usuario([Usuário])
@@ -13,3 +14,4 @@ end
 Usuario --> A1
 Usuario --> A2
 Usuario --> A3
+```
