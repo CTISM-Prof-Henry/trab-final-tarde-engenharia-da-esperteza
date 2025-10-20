@@ -45,21 +45,3 @@ Utilize esse [link](https://github.com/CTISM-Prof-Henry/trab-final-tarde-engenha
 1. `npm install`
 2. `ng serve`
 3. Abra o site no navegador com [http://localhost:4200/](http://localhost:4200/)
-
-#Diagrama de caso de uso
-flowchart LR
-%% Atores
-Usuario([Usuário])
-
-%% Casos de uso
-subgraph "Sistema"
-A1(Avaliar Professor)
-A2(Visualizar Avaliações dos Semestres)
-A3(Visualizar Avaliações dos Professores)
-end
-
-%% Relações
-Usuario --> A1
-Usuario --> A2
-Usuario --> A3
-
