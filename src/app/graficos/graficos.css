@@ -1,0 +1,19 @@
+.barra {
+  width: 60px;
+  margin: 0 auto;
+  background-color: #0d6efd;
+  border-radius: 6px;
+}
+
+.valor {
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.rotulo {
+  font-size: 14px;
+  margin-top: -4px;
+}
+.container {
+  padding-bottom: 80px; /* deixa mais perto do rodapé */
+}
