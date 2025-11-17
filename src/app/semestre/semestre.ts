@@ -1,39 +1,56 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-semestre',
   standalone: true,
-  imports: [CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './semestre.html',
-  styleUrl: './semestre.css'
+  styleUrls: ['./semestre.css']
 })
 export class Semestre {
-  @ViewChild('comentario', { static: false }) comentarioRef!: ElementRef<HTMLTextAreaElement>;
+  
+  professores = [
+    { codigo: 'CPINT321', disciplina: 'Introdução à Computação', nome: 'Edmundo Gonzalez' },
+    { codigo: 'MAT101', disciplina: 'Cálculo I', nome: 'Carla Rodrigues' },
+    { codigo: 'FIS201', disciplina: 'Física I', nome: 'Henrique Lima' }
+  ];
+
+  profSelecionado: any = null;
+
+  estrelas = [1, 2, 3, 4, 5];
+
+  notaConteudo: number | null = null;
+  notaProfessor: number | null = null;
+  comentario: string = '';
 
   showSuccess = false;
   showError = false;
 
-  onEnviar() {
-    const r1 = document.querySelector<HTMLInputElement>("input[name='rating1']:checked");
-    const r2 = document.querySelector<HTMLInputElement>("input[name='rating2']:checked");
-    const comentario = this.comentarioRef?.nativeElement?.value?.trim() ?? '';
-
-    if (!r1 || !r2 || comentario === '') {
+  enviar() {
+    if (!this.profSelecionado || !this.notaConteudo || !this.notaProfessor || !this.comentario.trim()) {
       this.showError = true;
-      // fecha automaticamente após 2.5s (opcional)
-      setTimeout(() => this.showError = false, 2500);
       return;
     }
 
     this.showSuccess = true;
-    setTimeout(() => this.showSuccess = false, 2500);
 
-    // aqui você pode enviar os dados para a API / salvar no localStorage etc.
+    console.log('Avaliação enviada:', {
+      professor: this.profSelecionado,
+      notaConteudo: this.notaConteudo,
+      notaProfessor: this.notaProfessor,
+      comentario: this.comentario
+    });
+
+    this.profSelecionado = null;
+    this.notaConteudo = null;
+    this.notaProfessor = null;
+    this.comentario = '';
   }
 
   closeModals() {
-    this.showError = false;
     this.showSuccess = false;
+    this.showError = false;
   }
 }
