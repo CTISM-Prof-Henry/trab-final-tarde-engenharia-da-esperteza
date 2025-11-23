@@ -1,25 +1,60 @@
-/* Modal backdrop */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
+/* --- SISTEMA DE ESTRELAS --- */
+
+.rating {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.45);
-  z-index: 2000;
+  direction: rtl; /* permite usar ~ para pintar as anteriores */
+  gap: 4px;
 }
 
-/* Modal box */
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 32px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/* Hover: pinta a estrela e todas as anteriores */
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffca2c;
+}
+
+/* Selecionado: pinta as estrelas marcadas */
+.rating input:checked ~ label {
+  color: #ffc107;
+}
+
+/* --- MODAL --- */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
 .modal-box {
   background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  min-width: 280px;
-  max-width: 90%;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
   text-align: center;
 }
 
-/* success / error visuals */
-.modal-box.success { border-top: 6px solid #198754; }
-.modal-box.error { border-top: 6px solid #dc3545; }
+.modal-box.success {
+  border-left: 6px solid #28a745;
+}
+
+.modal-box.error {
+  border-left: 6px solid #dc3545;
+}

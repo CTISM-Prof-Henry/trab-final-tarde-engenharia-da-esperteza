@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./semestre.css']
 })
 export class Semestre {
-  
+
   professores = [
     { codigo: 'CPINT321', disciplina: 'Introdução à Computação', nome: 'Edmundo Gonzalez' },
     { codigo: 'MAT101', disciplina: 'Cálculo I', nome: 'Carla Rodrigues' },

@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
-import { Semestre } from './semestre';
+@Component({
+  selector: 'app-semestre',
+  standalone: true,
+  templateUrl: './semestre.html',
+  styleUrls: ['./semestre.css']
+})
+export class Semestre {
 
-describe('Semestre', () => {
-  let component: Semestre;
-  let fixture: ComponentFixture<Semestre>;
+  showSuccess = false;
+  showError = false;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Semestre]
-    })
-    .compileComponents();
+  onEnviar() {
+    this.showSuccess = true;
+  }
 
-    fixture = TestBed.createComponent(Semestre);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  closeModals() {
+    this.showSuccess = false;
+    this.showError = false;
+  }
+}
