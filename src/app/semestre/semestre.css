@@ -1,8 +1,6 @@
-/* --- SISTEMA DE ESTRELAS --- */
-
 .rating {
   display: flex;
-  direction: rtl; /* permite usar ~ para pintar as anteriores */
+  direction: rtl;
   gap: 4px;
 }
 
@@ -17,13 +15,11 @@
   transition: color 0.2s;
 }
 
-/* Hover: pinta a estrela e todas as anteriores */
 .rating label:hover,
 .rating label:hover ~ label {
   color: #ffca2c;
 }
 
-/* Selecionado: pinta as estrelas marcadas */
 .rating input:checked ~ label {
   color: #ffc107;
 }
