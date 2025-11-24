@@ -81,8 +81,12 @@
                 "input": "public"
               }
             ],
+            "scripts": [
+              "src/assets/js/graficos.js"
+            ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/graficos/graficos.css"
             ]
           }
         }

@@ -1,20 +1,50 @@
-.barra {
-  width: 60px;
-  margin: 0 auto;
-  background-color: #0d6efd;
-  border-radius: 6px;
-}
+.container {
+      text-align: center;
+      margin-top: 40px;
+    }
 
-.valor {
-  font-weight: bold;
-  margin-top: 6px;
-}
+    #linhaBase {
+      width: 100%;
+      height: 2px;
+      background: #000;
+      margin-top: 20px;
+    }
 
-.rotulo {
-  font-size: 14px;
-  margin-top: -4px;
-}
+    #areaGraficos {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 400px;
+      margin-top: 20px;
+    }
 
-#areaGraficos {
-  margin-top: 60px;
-}
+    .barra-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0 20px;
+    }
+
+    .barra {
+      width: 60px;
+      background-color: #0d6efd;
+      border-radius: 6px 6px 0 0;
+      height: 0;
+      transition: height 0.5s;
+    }
+
+    .valor {
+      font-weight: bold;
+      margin-top: 6px;
+    }
+
+    .rotulo {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    select.form-select {
+      width: 50%;
+      margin: 20px auto;
+    }

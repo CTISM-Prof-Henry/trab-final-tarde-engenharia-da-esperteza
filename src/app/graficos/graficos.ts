@@ -1,48 +1,39 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-graficos',
   standalone: true,
   templateUrl: './graficos.html',
-  styleUrl: './graficos.css',
-  imports: [CommonModule, FormsModule]
+  styleUrls: ['./graficos.css']
 })
-export class Graficos {
-
-  semestreSelecionado: string = "2025-01";
-
+export class Graficos implements AfterViewInit {
   dados: any = {
-    "2025-01": {
-      desistentes: 5,
-      aprovados: 80,
-      avaliaram: 90
-    },
-    "2024-02": {
-      desistentes: 12,
-      aprovados: 70,
-      avaliaram: 55
-    }
+    "2025-01": { desistentes: 5, aprovados: 80, avaliaram: 90 },
+    "2024-02": { desistentes: 12, aprovados: 70, avaliaram: 55 }
   };
 
-  valores = {
-    desistentes: 0,
-    aprovados: 0,
-    avaliaram: 0
-  };
+  ngAfterViewInit() {
+    const select = document.getElementById("selectSemestre") as HTMLSelectElement;
+    const barraDesist = document.getElementById("barraDesist")!;
+    const barraAprov = document.getElementById("barraAprov")!;
+    const barraAval = document.getElementById("barraAval")!;
+    const valorDesist = document.getElementById("valorDesist")!;
+    const valorAprov = document.getElementById("valorAprov")!;
+    const valorAval = document.getElementById("valorAval")!;
 
-  atualizarGraficos() {
-    const info = this.dados[this.semestreSelecionado];
+    select.addEventListener("change", () => {
+      const sem = select.value;
+      if (!this.dados[sem]) return;
 
-    if (!info) return;
+      const d = this.dados[sem];
 
-    this.valores.desistentes = info.desistentes;
-    this.valores.aprovados = info.aprovados;
-    this.valores.avaliaram = info.avaliaram;
-  }
+      barraDesist.style.height = d.desistentes * 2 + "px";
+      barraAprov.style.height = d.aprovados * 2 + "px";
+      barraAval.style.height = d.avaliaram * 2 + "px";
 
-  ngOnInit() {
-    this.atualizarGraficos();
+      valorDesist.textContent = d.desistentes + "%";
+      valorAprov.textContent = d.aprovados + "%";
+      valorAval.textContent = d.avaliaram + "%";
+    });
   }
 }
